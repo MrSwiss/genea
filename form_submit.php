@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 $operation_sign = [
     'more' => ' > ',
     'more_equal_to' => ' >= ',
@@ -88,9 +89,17 @@ $text_ = [
     3 => "",
     4 => ""
 ];
-
+//$name_ea = substr(md5(date('Ymd')), 0, 10) . '_' . $_SESSION['user'] . '_' . substr(md5(date('dmy')), 0, 10) . '_' . $_POST['action_submit'];
+$name_ea = substr(md5(date('YmdsiH')), 0, 10) . str_pad($_SESSION['user'], 3, "0", STR_PAD_LEFT) . substr(md5(date('dmyHis')), 0, 10) . '_' . $_POST['action_submit'];
+$magic_number = $_POST['magic_number'];
+echo "extern double TP" . ";<br>";
+echo "extern double SL" . ";<br>";
+echo "extern double Lots" . ";<br>";
+echo "extern double Magic = " . $magic_number . ";<br>";
+echo "extern string ea_name = " . $name_ea . '-' . $name_ea[10] . $name_ea[11] . $name_ea[12] . ";<br>";
 for ($t = 1; $t <= 4; $t++) {
-    echo "Tab : " . $t . '<br>';
+//    echo "Tab : " . $t . '<br>';
+
     $idc_true = 0;
     $decision = "";
     $opt = '';
@@ -147,6 +156,19 @@ for ($t = 1; $t <= 4; $t++) {
         echo str_replace('{{_operation_}}', $opt, $arr_text_start_if[$t - 1]);
     }
     echo $arr_text_end[$t];
-    echo "<hr>";
+    echo "<br>";
+
+
+//    echo "<hr>";
 }
-?>
+
+$Lots = $_POST['Lots'];
+$TakeProfit = $_POST['TakeProfit'];
+$StopLoss = $_POST['StopLoss'];
+echo "bool Option(){<br>";
+echo "TP = " . $TakeProfit . ";<br>";
+echo "SL = " . $StopLoss . ";<br>";
+echo "Lots = " . $Lots . ";<br>";
+echo "if( TP != 0 ){<br>";
+echo "return 1;<br>";
+echo "}else return 0;<br>}";

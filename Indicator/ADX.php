@@ -6,7 +6,7 @@
             <td>
                 <select name="TimeFrame">
                     <option selected="selected" value="0">Current</option>
-                    <option value="PERIOD_M1">PERIOD_M1</option>
+                    <option value="PERIOD_M1" selected="">PERIOD_M1</option>
                     <option value="PERIOD_M5">PERIOD_M5</option>
                     <option value="PERIOD_M15">PERIOD_M15</option>
                     <option value="PERIOD_M30">PERIOD_M30</option>
@@ -23,7 +23,7 @@
                 <span>Period</span>
             </td>
             <td>
-                <input name="Period" type="text">
+                <input name="Period" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -35,7 +35,7 @@
             <td>
                 <select name="Price">
                     <option selected="selected" value="--Select--">--Select--</option>
-                    <option value="PRICE_CLOSE">PRICE_CLOSE</option>
+                    <option value="PRICE_CLOSE" selected="">PRICE_CLOSE</option>
                     <option value="PRICE_OPEN">PRICE_OPEN</option>
                     <option value="PRICE_HIGH">PRICE_HIGH</option>
                     <option value="PRICE_LOW">PRICE_LOW</option>
@@ -53,7 +53,7 @@
             <td>
                 <select name="Mode">
                     <option selected="selected" value="--Select--">--Select--</option>
-                    <option value="MODE_MAIN">MODE_MAIN</option>
+                    <option value="MODE_MAIN" selected="">MODE_MAIN</option>
                     <option value="MODE_PLUSDI">MODE_PLUSDI</option>
                     <option value="MODE_PLUSDI">MODE_MINUSDI</option>
                 </select>
@@ -65,7 +65,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text">
+                <input name="Shift" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>

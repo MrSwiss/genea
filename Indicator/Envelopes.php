@@ -6,7 +6,7 @@
             <td>
                 <select name="TimeFrame">
                     <option selected="selected" value="0">Current</option>
-                    <option value="PERIOD_M1">PERIOD_M1</option>
+                    <option value="PERIOD_M1" selected="">PERIOD_M1</option>
                     <option value="PERIOD_M5">PERIOD_M5</option>
                     <option value="PERIOD_M15">PERIOD_M15</option>
                     <option value="PERIOD_M30">PERIOD_M30</option>
@@ -23,7 +23,7 @@
                 <span>MA Period</span>
             </td>
             <td>
-                <input name="MaPeriod" type="text">
+                <input name="MaPeriod" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -35,7 +35,7 @@
             <td>
                 <select name="MaMethod">
                     <option selected="selected" value="--Select--">--Select--</option>
-                    <option value="MODE_SMA">MODE_SMA</option>
+                    <option value="MODE_SMA" selected="">MODE_SMA</option>
                     <option value="MODE_EMA">MODE_EMA</option>
                     <option value="MODE_SMMA">MODE_SMMA</option>
                     <option value="MODE_LWMA">MODE_LWMA</option>
@@ -48,7 +48,7 @@
                 <span>MA Shift</span>
             </td>
             <td>
-                <input name="MaShift" type="text">
+                <input name="MaShift" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -60,7 +60,7 @@
             <td>
                 <select name="Price">
                     <option selected="selected" value="--Select--">--Select--</option>
-                    <option value="PRICE_CLOSE">PRICE_CLOSE</option>
+                    <option value="PRICE_CLOSE" selected="">PRICE_CLOSE</option>
                     <option value="PRICE_OPEN">PRICE_OPEN</option>
                     <option value="PRICE_HIGH">PRICE_HIGH</option>
                     <option value="PRICE_LOW">PRICE_LOW</option>
@@ -76,7 +76,7 @@
                 <span>Deviation</span>
             </td>
             <td>
-                <input name="Deviation" type="text">
+                <input name="Deviation" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -88,7 +88,7 @@
             <td>
                 <select name="Mode">
                     <option selected="selected" value="--Select--">--Select--</option>
-                    <option value="MODE_UPPER">MODE_UPPER</option>
+                    <option value="MODE_UPPER" selected="">MODE_UPPER</option>
                     <option value="MODE_LOWER">MODE_LOWER</option>
                 </select>
                 &nbsp;
@@ -99,7 +99,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text">
+                <input name="Shift" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>

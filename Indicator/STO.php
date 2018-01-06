@@ -6,7 +6,7 @@
             <td>
                 <select name="TimeFrame">
                     <option selected="selected" value="0">Current</option>
-                    <option value="PERIOD_M1">PERIOD_M1</option>
+                    <option value="PERIOD_M1" selected="">PERIOD_M1</option>
                     <option value="PERIOD_M5">PERIOD_M5</option>
                     <option value="PERIOD_M15">PERIOD_M15</option>
                     <option value="PERIOD_M30">PERIOD_M30</option>
@@ -23,7 +23,7 @@
                 <span>K Period</span>
             </td>
             <td>
-                <input name="KPeriod" type="text">
+                <input name="KPeriod" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -33,7 +33,7 @@
                 <span>D Period</span>
             </td>
             <td>
-                <input name="DPeriod" type="text">
+                <input name="DPeriod" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -43,7 +43,7 @@
                 <span>Slowing</span>
             </td>
             <td>
-                <input name="Slowing" type="text">
+                <input name="Slowing" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -55,7 +55,7 @@
             <td>
                 <select name="Method">
                     <option selected="selected" value="--Select--">--Select--</option>
-                    <option value="MODE_SMA">MODE_SMA</option>
+                    <option value="MODE_SMA" selected="">MODE_SMA</option>
                     <option value="MODE_EMA">MODE_EMA</option>
                     <option value="MODE_SMMA">MODE_SMMA</option>
                     <option value="MODE_LWMA">MODE_LWMA</option>
@@ -70,7 +70,7 @@
             <td>
                 <select name="price_field">
 
-                    <option value="0">Low/High</option>
+                    <option value="0" selected="">Low/High</option>
                     <option value="1">close/close</option>
 
                 </select>
@@ -84,7 +84,7 @@
             <td>
                 <select name="Mode">
                     <option selected="selected" value="--Select--">--Select--</option>
-                    <option value="MODE_MAIN">MODE_MAIN</option>
+                    <option value="MODE_MAIN" selected="">MODE_MAIN</option>
                     <option value="MODE_SIGNAL">MODE_SIGNAL</option>
                 </select>
                 &nbsp;
@@ -95,7 +95,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text">
+                <input name="Shift" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>

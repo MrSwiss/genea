@@ -7,7 +7,7 @@
             <td>
                 <select name="TimeFrame">
                     <option selected="selected" value="0">Current</option>
-                    <option value="PERIOD_M1">PERIOD_M1</option>
+                    <option value="PERIOD_M1" selected="">PERIOD_M1</option>
                     <option value="PERIOD_M5">PERIOD_M5</option>
                     <option value="PERIOD_M15">PERIOD_M15</option>
                     <option value="PERIOD_M30">PERIOD_M30</option>
@@ -24,7 +24,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text">
+                <input name="Shift" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>

@@ -1,6 +1,7 @@
 <?php
+require './db_con.php';
 if (isset($_POST['ac_username'])) {
-    echo "hi method post";
+//    echo "hi method post";
     $username = $_POST['ac_username'];
     $pass = $_POST['ac_password'];
     $fullname = $_POST['fullname'];
@@ -8,10 +9,12 @@ if (isset($_POST['ac_username'])) {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $user_modify = date('Y-m-d H:i:s');
-    $admin_type = 0;
-    require './db_con.php';
-    $sql_insert = "";
-    // query update
+
+
+    $sql_insert = "INSERT INTO ac_user (ac_username,ac_password,fullname,nickname,email,phone,user_modify,admin_type) " .
+            " VALUES ('{$username}','{$pass}','{$fullname}' , '{$nickname}' , '{$email}' , '{$phone}' , '{$user_modify}' , 0 ) ;";
+    $ret = $conn->query($sql_insert);
+
     echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />";
     echo "<script type='text/javascript'>window.location='index.php';</script>";
 }
@@ -19,7 +22,22 @@ $active_menu = 2;
 require './head.php';
 ?>
 
+<script>
+    window.addEventListener('message', function (event) {
 
+        // IMPORTANT: Check the origin of the data! 
+        if (~event.origin.indexOf('http://238554a2.ngrok.io')) {
+            // The data has been sent from your site 
+
+            // The data sent with postMessage is stored in event.data 
+            console.log(event.data);
+        } else {
+            // The data hasn't been sent from your site! 
+            // Be careful! Do not use it. 
+            return;
+        }
+    });
+</script>
 <div class="row" style="margin-top: 20px;">
     <div class="col-md-8 col-md-offset-2">
         <form class="form-horizontal" action="" method="post">
@@ -32,7 +50,7 @@ require './head.php';
             <div class="form-group">
                 <label class="control-label col-md-3">password</label>
                 <div class="col-md-6">
-                    <input name="ac_password" class="form-control">
+                    <input name="ac_password" type="password" class="form-control">
                 </div>
             </div>
             <div class="form-group">
@@ -59,12 +77,7 @@ require './head.php';
                     <input name="phone" class="form-control">
                 </div>
             </div>
-            <div class="form-group">
-                <label class="control-label col-md-3">username</label>
-                <div class="col-md-6">
-                    <input name="ac_username" class="form-control">
-                </div>
-            </div>
+
             <div class="form-group text-center">
                 <button class="btn btn-primary btn-sm" type="submit">บันทึก</button>
                 <a class="btn btn-primary btn-sm" href="index.php">กลับ</a>
@@ -73,7 +86,7 @@ require './head.php';
     </div>
 
 </div>
-</div>
+
 
 <div class="modal fade in" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" >
     <div class="modal-dialog">

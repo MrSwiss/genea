@@ -6,7 +6,7 @@
             <td>
                 <select name="TimeFrame">
                     <option selected="selected" value="0">Current</option>
-                    <option value="PERIOD_M1">PERIOD_M1</option>
+                    <option value="PERIOD_M1" selected="">PERIOD_M1</option>
                     <option value="PERIOD_M5">PERIOD_M5</option>
                     <option value="PERIOD_M15">PERIOD_M15</option>
                     <option value="PERIOD_M30">PERIOD_M30</option>
@@ -23,7 +23,7 @@
                 <span>Tenkan Sen</span>
             </td>
             <td>
-                <input name="TenkanSen" type="text">
+                <input name="TenkanSen" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -33,7 +33,7 @@
                 <span>Kijun Sen</span>
             </td>
             <td>
-                <input name="KijunSen" type="text">
+                <input name="KijunSen" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -43,7 +43,7 @@
                 <span>Senkou Span B</span>
             </td>
             <td>
-                <input name="SenkouSpanB" type="text">
+                <input name="SenkouSpanB" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -55,7 +55,7 @@
             <td>
                 <select name="Mode">
                     <option selected="selected" value="--Select--">--Select--</option>
-                    <option value="MODE_TENKANSEN">MODE_TENKANSEN</option>
+                    <option value="MODE_TENKANSEN" selected="">MODE_TENKANSEN</option>
                     <option value="MODE_KIJUNSEN">MODE_KIJUNSEN</option>
                     <option value="MODE_SENKOUSPANA">MODE_SENKOUSPANA</option>
                     <option value="MODE_SENKOUSPANB">MODE_SENKOUSPANB</option>
@@ -69,7 +69,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text">
+                <input name="Shift" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>

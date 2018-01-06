@@ -7,7 +7,7 @@
             <td>
                 <select name="TimeFrame">
                     <option selected="selected" value="0">Current</option>
-                    <option value="PERIOD_M1">PERIOD_M1</option>
+                    <option value="PERIOD_M1" selected="">PERIOD_M1</option>
                     <option value="PERIOD_M5">PERIOD_M5</option>
                     <option value="PERIOD_M15">PERIOD_M15</option>
                     <option value="PERIOD_M30">PERIOD_M30</option>
@@ -24,7 +24,7 @@
                 <span>MA_Period</span>
             </td>
             <td>
-                <input name="MA_Period" type="text">
+                <input name="MA_Period" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -34,7 +34,7 @@
                 <span>MA_Shift</span>
             </td>
             <td>
-                <input name="MA_Shift" type="text">
+                <input name="MA_Shift" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -45,7 +45,7 @@
             </td>
             <td>
                 <select name="MA_METHOD">
-                    <option value="MODE_SMA">MODE_SMA</option>
+                    <option value="MODE_SMA" selected="">MODE_SMA</option>
                     <option value="MODE_EMA">MODE_EMA</option>
                     <option value="MODE_SMMA">MODE_SMMA</option>
                     <option value="MODE_LWMA">MODE_LWMA</option>
@@ -58,7 +58,7 @@
             </td>
             <td>
                 <select name="APPLIED_PRICE">
-                    <option value="PRICE_CLOSE">PRICE_CLOSE</option>
+                    <option value="PRICE_CLOSE" selected="">PRICE_CLOSE</option>
                     <option value="PRICE_OPEN">PRICE_OPEN</option>
                     <option value="PRICE_HIGH">PRICE_HIGH</option>
                     <option value="PRICE_LOW">PRICE_LOW</option>
@@ -73,7 +73,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text">
+                <input name="Shift" type="text" value="1">
                 &nbsp;
                 &nbsp;
             </td>
