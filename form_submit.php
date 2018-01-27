@@ -92,11 +92,12 @@ $text_ = [
 //$name_ea = substr(md5(date('Ymd')), 0, 10) . '_' . $_SESSION['user'] . '_' . substr(md5(date('dmy')), 0, 10) . '_' . $_POST['action_submit'];
 $name_ea = substr(md5(date('YmdsiH')), 0, 10) . str_pad($_SESSION['user'], 3, "0", STR_PAD_LEFT) . substr(md5(date('dmyHis')), 0, 10) . '_' . $_POST['action_submit'];
 $magic_number = $_POST['magic_number'];
-echo "extern double TP" . ";<br>";
-echo "extern double SL" . ";<br>";
-echo "extern double Lots" . ";<br>";
-echo "extern double Magic = " . $magic_number . ";<br>";
-echo "extern string ea_name = " . $name_ea . '-' . $name_ea[10] . $name_ea[11] . $name_ea[12] . ";<br>";
+echo "double TP" . ";<br>";
+echo "double SL" . ";<br>";
+echo "double Lots" . ";<br>";
+echo "double Magic = " . $magic_number . ";<br>";
+echo 'string ea_name = "' . $name_ea . '_";<br>';
+//echo 'extern string ea_name = "' . $name_ea . '-' . date('YmdHi') . '-' . $name_ea[10] . $name_ea[11] . $name_ea[12] . '";<br>';
 for ($t = 1; $t <= 4; $t++) {
 //    echo "Tab : " . $t . '<br>';
 

@@ -40,8 +40,9 @@
     ?>
     <div class="row">
         <div class="btn-group btn-group-justified" >
-            <a href="user.php" class="btn btn-warning" <?php echo ($active_menu == 1 ? 'style="background: #3c3c3c;"' : ''); ?>><i class="fa fa-user" aria-hidden="true"></i> ข้อมูลส่วนตัว</a>
+            <a href="suggestion.php" class="btn btn-warning" <?php echo ($active_menu == 0 ? 'style="background: #3c3c3c;"' : ''); ?>><i class="fa fa-user" aria-hidden="true"></i> หนัาหลัก</a>
             <a href="generator.php" class="btn btn-warning" <?php echo ($active_menu == 2 ? 'style="background: #3c3c3c;"' : ''); ?>><i class="fa fa-plus" aria-hidden="true"></i> สร้าง Code</a>
+            <a href="user.php" class="btn btn-warning" <?php echo ($active_menu == 1 ? 'style="background: #3c3c3c;"' : ''); ?>><i class="fa fa-user" aria-hidden="true"></i> ข้อมูลส่วนตัว</a>
             <a href="ad_logout.php" class="btn btn-warning" <?php echo ($active_menu == 3 ? 'style="background: #3c3c3c;"' : ''); ?>><i class="fa fa-home" aria-hidden="true"></i> ออกจากระบบ</a>
         </div>
     </div>

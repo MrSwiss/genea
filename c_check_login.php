@@ -15,7 +15,7 @@ $flag = 0;
 while ($row = $result->fetchArray(SQLITE3_ASSOC)) {
     $_SESSION["user"] = $row['user_id'];
     echo "<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />";
-    echo "<script type='text/javascript'>window.location='user.php';</script>";
+    echo "<script type='text/javascript'>window.location='suggestion.php';</script>";
     break;
 }
 if ($flag == 0) {

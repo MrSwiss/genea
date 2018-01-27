@@ -3,7 +3,26 @@
 $active_menu = 1;
 require 'head.php';
 ?>
-<div >
+
+                <!-- /Header -->
+                <!-- Main -->
+                <div id="main-wrapper" style="min-height: 600px;">
+
+                    <div class="row">
+                        <div class="col-md-12 text-center" style="margin-top: 20px;">
+                            <div class="img-thumbnail" >
+                                <img src="https://www.officemate.co.th/Activity/newfaeture/images/process/flow-app.jpg">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+<!--<div >
     <div class="row">
         <div class="col-md-12 text-center" style="margin-top: 20px;">
             <div class="img-thumbnail" >
@@ -20,9 +39,9 @@ require 'head.php';
                         <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
                     </button>
                 </div>
-                <!-- Begin # DIV Form -->
+                 Begin # DIV Form 
                 <div id="div-forms">
-                    <!-- Begin # Login Form -->
+                     Begin # Login Form 
                     <form id="login-form" action="c_check_login.php" method="post">
                         <div class="modal-body">
                             <div id="div-login-msg">
@@ -38,12 +57,12 @@ require 'head.php';
                             </div>
                         </div>
                     </form>
-                    <!-- End # Login Form -->
+                     End # Login Form 
                 </div>
-                <!-- End # DIV Form -->
+                 End # DIV Form 
             </div>
         </div>
     </div>
 </div>
 </div>
-</body>
+</body> -->
