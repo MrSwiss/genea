@@ -23,7 +23,7 @@
                 <span>Period</span>
             </td>
             <td>
-                <input name="Period" type="text" value="1">
+                <input name="Period" type="number" value="1">
                 &nbsp;
             </td>
         </tr>
@@ -32,7 +32,7 @@
                 <span>Deviation</span>
             </td>
             <td>
-                <input name="Deviation" type="text" value="1">
+                <input name="Deviation" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -42,7 +42,7 @@
                 <span>Bands Shift</span>
             </td>
             <td>
-                <input name="Bands_Shift" type="text" value="1">
+                <input name="Bands_Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -84,7 +84,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text" value="1">
+                <input name="Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>

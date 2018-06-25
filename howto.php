@@ -4,23 +4,40 @@ $active_menu = 1;
 require 'head.php';
 ?>
 
-                <!-- /Header -->
-                <!-- Main -->
-                <div id="main-wrapper" style="min-height: 600px;">
+<!-- /Header -->
+<!-- Main -->
+<style>
+    .blink_me {
+        animation: blinker 1s linear infinite;
+    }
 
-                    <div class="row">
-                        <div class="col-md-12 text-center" style="margin-top: 20px;">
-                            <div class="img-thumbnail" >
-                                <img src="https://www.officemate.co.th/Activity/newfaeture/images/process/flow-app.jpg">
-                            </div>
-                        </div>
-                    </div>
-                    
-                </div>
+    @keyframes blinker {
+        50% {
+            opacity: 0;
+        }
+    }
+</style>
+<div id="main-wrapper" style="min-height: 600px;">
+    <div class="row text-center blink_me" >
+        <a href="stepbystep.docx" >
+            <h3 style="font-weight: bold;color: green;">ดาวน์โหลดวิธีใช้งานโดยละเอียด >> คลิ๊ก <<</h3>
+        </a>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center" style="margin-top: 20px;">
+            <div class="img-thumbnail" >
+                <img src="/img/howtouse.jpg">
             </div>
         </div>
+    </div>
 
-    </body>
+
+</div>
+</div>
+</div>
+
+</body>
+<?php require './footer.php'; ?>
 </html>
 <!--<div >
     <div class="row">

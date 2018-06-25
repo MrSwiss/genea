@@ -24,7 +24,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text" value="1">
+                <input name="Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>

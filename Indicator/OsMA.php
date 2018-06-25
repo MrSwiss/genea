@@ -23,7 +23,7 @@
                 <span>Fast EMA Period</span>
             </td>
             <td>
-                <input name="FastEMAPeriod" type="text" value="1">
+                <input name="FastEMAPeriod" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -33,7 +33,7 @@
                 <span>Slow EMA Period</span>
             </td>
             <td>
-                <input name="SlowEMAPeriod" type="text" value="1">
+                <input name="SlowEMAPeriod" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -43,7 +43,7 @@
                 <span>Signal Period</span>
             </td>
             <td>
-                <input name="SignalPeriod" type="text" value="1">
+                <input name="SignalPeriod" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -71,7 +71,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text" value="1">
+                <input name="Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>

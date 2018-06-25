@@ -23,7 +23,7 @@
                 <span>Tenkan Sen</span>
             </td>
             <td>
-                <input name="TenkanSen" type="text" value="1">
+                <input name="TenkanSen" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -33,7 +33,7 @@
                 <span>Kijun Sen</span>
             </td>
             <td>
-                <input name="KijunSen" type="text" value="1">
+                <input name="KijunSen" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -43,7 +43,7 @@
                 <span>Senkou Span B</span>
             </td>
             <td>
-                <input name="SenkouSpanB" type="text" value="1">
+                <input name="SenkouSpanB" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -69,7 +69,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text" value="1">
+                <input name="Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>

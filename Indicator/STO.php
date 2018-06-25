@@ -23,7 +23,7 @@
                 <span>K Period</span>
             </td>
             <td>
-                <input name="KPeriod" type="text" value="1">
+                <input name="KPeriod" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -33,7 +33,7 @@
                 <span>D Period</span>
             </td>
             <td>
-                <input name="DPeriod" type="text" value="1">
+                <input name="DPeriod" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -43,7 +43,7 @@
                 <span>Slowing</span>
             </td>
             <td>
-                <input name="Slowing" type="text" value="1">
+                <input name="Slowing" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -95,7 +95,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text" value="1">
+                <input name="Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>

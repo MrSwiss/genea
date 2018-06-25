@@ -23,7 +23,7 @@
                 <span>Period</span>
             </td>
             <td>
-                <input name="Period" type="text" required="" value="1">
+                <input name="Period" type="number" required="" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -33,7 +33,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text" required="" value="1">
+                <input name="Shift" type="number" required="" value="1">
                 &nbsp;
                 &nbsp;
             </td>

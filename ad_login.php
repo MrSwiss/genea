@@ -818,7 +818,7 @@
             </div>
 
             <div class="col-md-4">
-                <a class="btn btn-primary btn-sm" href="index.php">กลับ</a>
+                <a class="btn btn-primary btn-sm" href="index.html">กลับ</a>
             </div>
 
 

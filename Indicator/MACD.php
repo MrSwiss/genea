@@ -23,7 +23,7 @@
                 <span>Fast Period</span>
             </td>
             <td>
-                <input name="FastPeriod" type="text">
+                <input name="FastPeriod" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -33,7 +33,7 @@
                 <span>Slow Period</span>
             </td>
             <td>
-                <input name="SlowPeriod" type="text">
+                <input name="SlowPeriod" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -43,7 +43,7 @@
                 <span>Signal Period</span>
             </td>
             <td>
-                <input name="SignalPeriod" type="text">
+                <input name="SignalPeriod" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -84,7 +84,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text">
+                <input name="Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>

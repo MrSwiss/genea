@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+@session_start();
 $operation_sign = [
     'more' => ' > ',
     'more_equal_to' => ' >= ',
@@ -91,12 +91,23 @@ $text_ = [
 ];
 //$name_ea = substr(md5(date('Ymd')), 0, 10) . '_' . $_SESSION['user'] . '_' . substr(md5(date('dmy')), 0, 10) . '_' . $_POST['action_submit'];
 $name_ea = substr(md5(date('YmdsiH')), 0, 10) . str_pad($_SESSION['user'], 3, "0", STR_PAD_LEFT) . substr(md5(date('dmyHis')), 0, 10) . '_' . $_POST['action_submit'];
+if (!file_exists('code_backup/' . $name_ea . '/')) {
+    mkdir('code_backup/' . $name_ea . '/', 0777, true);
+}
+echo 'code_backup/' . $name_ea . '/fxcodegeneratedea_' . $name_ea . '.zip';
+echo "|";
 $magic_number = $_POST['magic_number'];
-echo "double TP" . ";<br>";
-echo "double SL" . ";<br>";
-echo "double Lots" . ";<br>";
-echo "double Magic = " . $magic_number . ";<br>";
-echo 'string ea_name = "' . $name_ea . '_";<br>';
+//echo "double TP" . ";<br>";
+//echo "double SL" . ";<br>";
+//echo "double Lots" . ";<br>";
+//echo "double Magic = " . $magic_number . ";<br>";
+//echo 'string ea_name = "' . $name_ea . '_";<br>';
+$code = '';
+$code .= "double TP" . ";<br>";
+$code .= "double SL" . ";<br>";
+$code .= "double Lots" . ";<br>";
+$code .= "double Magic = " . $magic_number . ";<br>";
+$code .= 'string ea_name = "' . $name_ea . '_";<br>';
 //echo 'extern string ea_name = "' . $name_ea . '-' . date('YmdHi') . '-' . $name_ea[10] . $name_ea[11] . $name_ea[12] . '";<br>';
 for ($t = 1; $t <= 4; $t++) {
 //    echo "Tab : " . $t . '<br>';
@@ -104,7 +115,8 @@ for ($t = 1; $t <= 4; $t++) {
     $idc_true = 0;
     $decision = "";
     $opt = '';
-    echo $arr_text_start[$t - 1];
+//    echo $arr_text_start[$t - 1];
+    $code .= $arr_text_start[$t - 1];
     for ($idc = 0; $idc < $_POST['tab_' . $t . '_idc_n']; $idc ++) {
 //        echo "Indicator ที่ " . $idc;
         if (isset($_POST['tab_' . $t . '_idc_' . $idc . '_num_ele_first']) && $_POST['tab_' . $t . '_idc_' . $idc . '_num_ele_first'] > 0 && $_POST['tab_' . $t . '_idc_' . $idc . '_num_ele_last'] > 0) {
@@ -154,10 +166,13 @@ for ($t = 1; $t <= 4; $t++) {
         }
     }
     if ($_POST['tab_' . $t . '_idc_n'] > 0) {
-        echo str_replace('{{_operation_}}', $opt, $arr_text_start_if[$t - 1]);
+//        echo str_replace('{{_operation_}}', $opt, $arr_text_start_if[$t - 1]);
+        $code .= str_replace('{{_operation_}}', $opt, $arr_text_start_if[$t - 1]);
     }
-    echo $arr_text_end[$t];
-    echo "<br>";
+//    echo $arr_text_end[$t];
+    $code.= $arr_text_end[$t];
+//    echo "<br>";
+    $code.= "<br>";
 
 
 //    echo "<hr>";
@@ -166,10 +181,77 @@ for ($t = 1; $t <= 4; $t++) {
 $Lots = $_POST['Lots'];
 $TakeProfit = $_POST['TakeProfit'];
 $StopLoss = $_POST['StopLoss'];
-echo "bool Option(){<br>";
-echo "TP = " . $TakeProfit . ";<br>";
-echo "SL = " . $StopLoss . ";<br>";
-echo "Lots = " . $Lots . ";<br>";
-echo "if( TP != 0 ){<br>";
-echo "return 1;<br>";
-echo "}else return 0;<br>}";
+//echo "bool Option(){<br>";
+//echo "TP = " . $TakeProfit . ";<br>";
+//echo "SL = " . $StopLoss . ";<br>";
+//echo "Lots = " . $Lots . ";<br>";
+//echo "if( TP != 0 ){<br>";
+//echo "return 1;<br>";
+//echo "}else return 0;<br>}";
+
+$code.= "bool Option(){<br>";
+$code.= "TP = " . $TakeProfit . ";<br>";
+$code.= "SL = " . $StopLoss . ";<br>";
+$code.= "Lots = " . $Lots . ";<br>";
+$code.= "if( TP != 0 ){<br>";
+$code.= "return 1;<br>";
+$code.= "}else return 0;<br>}";
+
+// ---------------------------------------------------
+
+
+/* create a compressed zip file */
+function createZip($files = array(), $destination = '', $overwrite = false) {
+
+    if (file_exists($destination) && !$overwrite) {
+        return false;
+    }
+
+
+    $validFiles = [];
+    if (is_array($files)) {
+        foreach ($files as $file) {
+            if (file_exists($file)) {
+                $validFiles[] = $file;
+            }
+        }
+    }
+
+
+    if (count($validFiles)) {
+        $zip = new ZipArchive();
+        if ($zip->open($destination, $overwrite ? ZIPARCHIVE::OVERWRITE : ZIPARCHIVE::CREATE) !== true) {
+            return false;
+        }
+
+
+        foreach ($validFiles as $file) {
+            $temp = explode('/', $file);
+            $zip->addFile($file, end($temp));
+        }
+
+
+        $zip->close();
+        return file_exists($destination);
+    } else {
+        return false;
+    }
+}
+
+$fileName = 'code_backup/' . $name_ea . '/fxcodegeneratedea_' . $name_ea . '.zip';
+// ---
+$myfile = fopen("code_backup/$name_ea/logic.mqh", "w") or die("Unable to open file!");
+$breaks = array("<br />", "<br>", "<br/>");
+$code = str_ireplace($breaks, "\r\n", $code);
+fwrite($myfile, $code);
+fclose($myfile);
+
+$files_to_zip = [ "code_backup/$name_ea/logic.mqh", 'code_backup/MM.mq4'];
+// ----
+$result = createZip($files_to_zip, $fileName);
+@header("Content-type: application/zip");
+@header("Content-Disposition: attachment; filename=\"" . $fileName . "\"");
+@header("Content-Length: " . filesize($fileName));
+@readfile($fileName);
+ob_end_flush();
+

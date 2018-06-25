@@ -24,7 +24,7 @@
                 <span>MA_Period</span>
             </td>
             <td>
-                <input name="MA_Period" type="text" value="1">
+                <input name="MA_Period" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -34,7 +34,7 @@
                 <span>MA_Shift</span>
             </td>
             <td>
-                <input name="MA_Shift" type="text" value="1">
+                <input name="MA_Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>
@@ -73,7 +73,7 @@
                 <span>Shift</span>
             </td>
             <td>
-                <input name="Shift" type="text" value="1">
+                <input name="Shift" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>

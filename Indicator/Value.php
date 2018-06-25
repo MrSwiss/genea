@@ -6,7 +6,7 @@
                 <span>value</span>
             </td>
             <td>
-                <input name="Value" type="text" value="1">
+                <input name="Value" type="number" value="1">
                 &nbsp;
                 &nbsp;
             </td>

@@ -6,7 +6,7 @@ ob_start();
 include 'db_con.php';
 
 $_username = $_POST['username1'];
-$_password = $_POST['password1'];
+$_password = md5($_POST['password1']);
 
 $sql = "SELECT * FROM ac_user WHERE ac_username='$_username' AND ac_password='$_password' AND admin_type= 1 ";
 $result = $conn->query($sql);
